@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* =========================
+   Heading
+========================= */
+
+h1 {
+    background-color: #111;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 90vh;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   Traffic Light + Result
+========================= */
+
+.inner-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+/* =========================
+   Traffic Light
+========================= */
+
+.main-box {
+    width: 130px;
+    height: 350px;
+
+    padding: 1rem;
+
+    border-radius: 1.5rem;
+    border: 2px solid #222;
+
+    background-color: #1b1b1b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Traffic Light Circles */
+
+.box {
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+    border: 3px solid #333;
+
+    box-shadow:
+        inset 0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 8px rgba(0, 0, 0, 0.3);
+
+    opacity: 0.35;
+
+    transition:
+        opacity 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Light Colors */
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+
+/* Active Light */
+
+.box.active {
+    opacity: 1;
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px currentColor,
+        0 0 30px currentColor;
+}
+
+/* Animation to blick lights
+ Define the blink effect */
+@keyframes blinkLight {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* Apply 10 blinks across 10 seconds (1 second per blink cycle) */
+.blink {
+  animation: blinkLight 1s ease-in-out 10;
+}
+
+
+/* =========================
+   Video / Rules Section
+========================= */
+
+.rules-book {
+    width: min(600px, 100%);
+    height: 350px;
+
+    background-color: white;
+
+    border-radius: 1.5rem;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Video */
+
+.video-container {
+    width: 100%;
+    height: 250px;
+
+    background-color: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* Result Information */
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    padding: 0.8rem;
+
+    text-align: center;
+}
+.color-circle{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1rem;
+}
+#result-title {
+    margin-bottom: 0.3rem;
+}
+
+.result p {
+    color: #555;
+}
+
+.circle{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: #111;
+    border: 0.5px solid black;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+button {
+    width: 110px;
+    height: 50px;
+
+    border-radius: 1rem;
+
+    background-color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Red Button */
+
+#red-btn {
+    border: 2px solid red;
+}
+
+#red-btn:hover {
+    background-color: red;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Green Button */
+
+#green-btn {
+    border: 2px solid green;
+}
+
+#green-btn:hover {
+    background-color: green;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Yellow Button */
+
+#yellow-btn {
+    border: 2px solid #d6b600;
+}
+
+#yellow-btn:hover {
+    background-color: yellow;
+    transform: translateY(-3px);
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+footer h3{
+    color: #f4f4f4;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 2rem 0;
+    }
+
+    .inner-container {
+        flex-direction: column;
+    }
+
+    .main-box {
+        width: 110px;
+        height: 300px;
+    }
+
+    .box {
+        width: 70px;
+        height: 70px;
+    }
+
+    .rules-book {
+        width: 100%;
+        height: 320px;
+    }
+
+    .video-container {
+        height: 220px;
+    }
+
+    .buttons {
+        margin-top: 1.5rem;
+    }
+}
