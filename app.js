@@ -30,7 +30,7 @@ function updateSignal(light, videoSrc, color, title, description) {
 redBtn.addEventListener("click", () => {
   updateSignal(
     red,
-    "./assets/Red.mp4",
+    "assets/Red.mp4",
     "red",
     "Red - Stop",
     "Stop your vehicle and wait until the signal changes to green.",
@@ -40,7 +40,7 @@ redBtn.addEventListener("click", () => {
 greenBtn.addEventListener("click", () => {
   updateSignal(
     green,
-    "./assets/green.mp4",
+    "assets/green.mp4",
     "green",
     "Green - Go",
     "Proceed when the way is clear and it is safe to move.",
@@ -50,7 +50,7 @@ greenBtn.addEventListener("click", () => {
 yellowBtn.addEventListener("click", () => {
   updateSignal(
     yellow,
-    "./assets/yellow.mp4",
+    "assets/yellow.mp4",
     "yellow",
     "Yellow - Caution / Prepare to Stop",
     "Slow down and prepare to stop as the signal is about to change.",
