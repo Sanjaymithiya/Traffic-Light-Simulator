@@ -30,7 +30,7 @@ function updateSignal(light, videoSrc, color, title, description) {
 redBtn.addEventListener("click", () => {
   updateSignal(
     red,
-    "./assets/red.mp4",
+    "./assets/Red.mp4",
     "red",
     "Red - Stop",
     "Stop your vehicle and wait until the signal changes to green.",
