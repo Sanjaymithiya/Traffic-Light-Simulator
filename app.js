@@ -40,7 +40,7 @@ redBtn.addEventListener("click", () => {
 greenBtn.addEventListener("click", () => {
   updateSignal(
     green,
-    "assets/green.mp4",
+    "assets/Green.mp4",
     "green",
     "Green - Go",
     "Proceed when the way is clear and it is safe to move.",
